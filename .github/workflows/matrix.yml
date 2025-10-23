@@ -6,6 +6,12 @@ jobs:
       matrix:
         node-version: [12, 13, 14]
         o-s: [ubuntu-latest, windows-latest]
+        include:
+          - node-version: 18
+            o-s: ubuntu-latest
+        exclude:
+          - node-version: 12
+            o-s: windows-latest    
     runs-on: ${{ matrix.o-s }}
     steps:
       - name: get code
