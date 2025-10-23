@@ -2,7 +2,7 @@ name: reusable file
 on: workflow_call
 jobs:
   deploy:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: depolying code
         run: echo " hi "
