@@ -68,7 +68,7 @@ jobs:
           path: dist
   deploy:
     needs: build
-    uses: controling_workflow\.github\workflows\reusable.yml
+    uses: ./.github/workflows/reusable.yml
   report: 
     needs: [lint, deploy]
     if: failure()
