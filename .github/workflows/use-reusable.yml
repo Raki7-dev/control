@@ -1,4 +1,4 @@
-name: Website Deployment
+name: reusable Website Deployment
 on:
   push:
     branches:
@@ -68,8 +68,8 @@ jobs:
           path: dist
   deploy:
     needs: build
-    uses: ./.github/workflows/reusable.yml
-  report:
+    uses: C:\Users\rakes\Downloads\Ruff\controling_workflow\.github\workflows\reusable.yml
+  report: 
     needs: [lint, deploy]
     if: failure()
     runs-on: ubuntu-latest
