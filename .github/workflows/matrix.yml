@@ -1,0 +1,16 @@
+name: matrix
+on: push
+jobs:
+  build:
+    strategy:
+      matrix:
+        node-version: [12, 13, 14]
+        o-s: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.o-s }}
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+      - name: install nodejs
+        uses: actions/setup-node@v3
+        with: 
+          node-version: ${{ matrix.node-version }}
