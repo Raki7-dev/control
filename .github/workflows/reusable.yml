@@ -4,7 +4,7 @@ on:
     inputs:
       artifact-name:
         description: The name of the deployable artifact name
-        requried: false
+        required: false
         default: dist
         type: string
 jobs:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get code
-        run: actions/download-artifact@v4
+        uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.artifact-name }}
       - name: list files
