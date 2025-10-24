@@ -18,4 +18,4 @@ jobs:
       - name: list files
         run: ls
       - name: depolying code
-        run: echo " hi "
+        run: echo " hi how r u "
